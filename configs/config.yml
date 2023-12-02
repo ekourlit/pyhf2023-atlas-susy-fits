@@ -1,0 +1,67 @@
+General:
+  Measurement: "background_only_fit"
+  POI: "mu_tty"
+  HistogramFolder: "./histograms"
+  InputPath: "/usatlas/u/ekourlit/usatlasdata/AnalysisChallenge2023/{SamplePath}"
+
+Regions:
+  - Name: "SR"
+    Variable: "MET"
+    Filter: "(passTrig_MET) & (nlep == 0) & (ngamma == 1) & (ntau == 1) & (isSignaltau1 == 1) & (isSignalgamma1 == 1) & (njet >= 4) & (nbjet == 1) & (MET > 400) & (mtaugamma>100)"
+    Binning: [0, 1000000]
+
+  - Name: "VR-tty"
+    Variable: "MET"
+    Filter: "(passTrig_MET) & (nlep == 0) & (ngamma == 1) & (ntau == 1) & (isSignaltau1 == 1) & (isSignalgamma1 == 1) & (njet >= 4) & (nbjet >= 2) & (mtaugamma>100) & (MET>400)"
+    Binning: [0, 1000000]
+
+  - Name: "VR-Wy"
+    Variable: "MET"
+    Filter: "(passTrig_MET) & (nlep == 0) & (ngamma == 1) & (ntau == 1) & (isSignaltau1 == 1) & (isSignalgamma1 == 1) & (njet >= 4) & (nbjet == 0) & (mtaugamma>100) & (MET>400)"
+    Binning: [0, 1000000]
+
+  - Name: "CR-tty"
+    Variable: "MET"
+    Filter: "(passTrig_MET) & (nlep == 0) & (ngamma == 1) & (ntau == 1) & (isSignaltau1 == 1) & (isSignalgamma1 == 1) & (njet >= 4) & (nbjet >= 2) & (MET>250) & (MET<400)"
+    Binning: [0, 1000000]
+    
+  - Name: "CR-Wy"
+    Variable: "MET"
+    Filter: "(passTrig_MET) & (nlep == 0) & (ngamma == 1) & (ntau == 1) & (isSignaltau1 == 1) & (isSignalgamma1 == 1) & (njet >= 4) & (nbjet == 0) & (MET>250) & (MET<400)"
+    Binning: [0, 1000000]
+
+Samples:
+  - Name: "Data"
+    Tree: "ntuple_THEORY"
+    SamplePath: "data.root"
+    Data: True
+
+  - Name: "tty"
+    Tree: "ntuple_THEORY"
+    SamplePath: "tty.root"
+    Weight: "EventWeight*140"
+
+  - Name: "Wy"
+    Tree: "ntuple_THEORY"
+    SamplePath: "Wy.root"
+    Weight: "EventWeight*140"
+
+Systematics:
+  - Name: "FlatSys"
+    Up:
+      Normalization: 0.2
+    Down:
+      Normalization: -0.2
+    Type: "Normalization"
+    Samples: ["tty", "Wy"]
+
+NormFactors:
+  - Name: "mu_tty"
+    Samples: "tty"
+    Nominal: 1
+    Bounds: [0, 10]
+    
+  - Name: "mu_Wt"
+    Samples: "Wy"
+    Nominal: 1
+    Bounds: [0, 10]
