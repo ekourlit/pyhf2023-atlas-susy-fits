@@ -2,7 +2,7 @@
 
 ## Abstract
 
-This contribution signifies a shift in ATLAS statistical data analysis by implementing traditional fit strategies utilizing the pyhf library, alongside the cabinetry library. Leveraging a toy Supersymmetry search analysis, three fit strategies inspired by the HistFitter framework are implemented. The "background-only fit," "model-dependent signal fit," and "model-independent signal fit" strategies show the adaptability of pyhf, liberating the analysis from dependence on traditional ROOT-based tools. In addition to enhancing clarity regarding the statistical model itself, this implementation signifies a broader shift towards contemporary standards in data analytics.
+This contribution signifies a shift in ATLAS statistical data analysis by implementing traditional fit strategies utilizing the `pyhf` library, alongside the `cabinetry` library. Leveraging a toy Supersymmetry search analysis, three fit strategies inspired by the HistFitter framework are implemented. The "background-only fit," "model-dependent signal fit," and "model-independent signal fit" strategies show the adaptability of `pyhf`, liberating the analysis from dependence on traditional ROOT-based tools. In addition to enhancing clarity regarding the statistical model itself, this implementation signifies a broader shift towards contemporary standards in data analytics.
 
 ## Getting started
 
