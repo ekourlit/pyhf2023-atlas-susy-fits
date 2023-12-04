@@ -12,4 +12,5 @@ The notebook [SUSY_pyfits.ipynb](https://gitlab.cern.ch/ekourlit/pyhf2023-atlas-
 
 Click the button below to run the notebook online via Binder:
 
-[![Binder](https://binderhub.ssl-hep.org/badge_logo.svg)](https://binderhub.ssl-hep.org/v2/git/https%3A%2F%2Fgitlab.cern.ch%2Fekourlit%2Fpyhf2023-atlas-susy-fits/HEAD?labpath=SUSY_pyfits.ipynb)
+* mybinder.org: [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/git/https%3A%2F%2Fgitlab.cern.ch%2Fekourlit%2Fpyhf2023-atlas-susy-fits.git/HEAD?labpath=SUSY_pyfits.ipynb)
+* IRIS-HEP SSL BinderHub: [![Binder](https://binderhub.ssl-hep.org/badge_logo.svg)](https://binderhub.ssl-hep.org/v2/git/https%3A%2F%2Fgitlab.cern.ch%2Fekourlit%2Fpyhf2023-atlas-susy-fits/HEAD?labpath=SUSY_pyfits.ipynb)
